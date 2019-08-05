@@ -4,6 +4,7 @@ package com.shopplus.service;
 import com.shopplus.pojo.FenType;
 import com.shopplus.pojo.Goods;
 import com.shopplus.pojo.GoodsType;
+import com.shopplus.pojo.IndexBanner;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ public interface GoodsService {
 
     List<Goods> getGoodsByBrand(FenType dongId, Goods brandId);
 
-    List<String> getBannerUrl();
+    List<IndexBanner> getBannerUrl();
 
     List<GoodsType> getGoodsTypeList();
 

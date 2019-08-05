@@ -4,6 +4,7 @@ import com.shopplus.mapper.GoodsMapper;
 import com.shopplus.pojo.FenType;
 import com.shopplus.pojo.Goods;
 import com.shopplus.pojo.GoodsType;
+import com.shopplus.pojo.IndexBanner;
 import com.shopplus.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,7 +40,7 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
-    public List<String> getBannerUrl() {
+    public List<IndexBanner> getBannerUrl() {
 
         return  goodsMapper.getBannerUrl();
     }
