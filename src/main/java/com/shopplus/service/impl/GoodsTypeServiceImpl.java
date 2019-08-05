@@ -1,8 +1,8 @@
 package com.shopplus.service.impl;
 
-import com.xcy.shop.mapper.GoodsTypeMapper;
-import com.xcy.shop.pojo.Goods;
-import com.xcy.shop.service.GoodsTypeService;
+import com.shopplus.mapper.GoodsTypeMapper;
+import com.shopplus.pojo.Goods;
+import com.shopplus.service.GoodsTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ public class GoodsTypeServiceImpl implements GoodsTypeService {
     GoodsTypeMapper goodsTypeMapper;
 
     @Override
-    public List<Goods> getGoodsListByGoodsTypeId(int typeId,int size) {
+    public List<Goods> getGoodsListByGoodsTypeId(int typeId, int size) {
         return goodsTypeMapper.getGoodsListByGoodsTypeId(typeId,size);
     }
 }

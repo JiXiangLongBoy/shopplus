@@ -1,9 +1,9 @@
 package com.shopplus.service.impl;
 
-import com.xcy.shop.mapper.UserMapper;
-import com.xcy.shop.pojo.LoginResult;
-import com.xcy.shop.pojo.User;
-import com.xcy.shop.service.UserService;
+import com.shopplus.mapper.UserMapper;
+import com.shopplus.pojo.LoginResult;
+import com.shopplus.pojo.User;
+import com.shopplus.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

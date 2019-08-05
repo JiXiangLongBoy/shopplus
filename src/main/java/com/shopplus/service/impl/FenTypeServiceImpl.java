@@ -1,9 +1,9 @@
 package com.shopplus.service.impl;
 
-import com.xcy.shop.mapper.FentypeMapper;
-import com.xcy.shop.pojo.DongType;
-import com.xcy.shop.pojo.FenType;
-import com.xcy.shop.service.FenTypeService;
+import com.shopplus.mapper.FentypeMapper;
+import com.shopplus.pojo.DongType;
+import com.shopplus.pojo.FenType;
+import com.shopplus.service.FenTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

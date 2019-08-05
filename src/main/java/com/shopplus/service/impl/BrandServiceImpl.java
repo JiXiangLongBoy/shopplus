@@ -1,8 +1,8 @@
 package com.shopplus.service.impl;
 
-import com.xcy.shop.mapper.BrandMapper;
-import com.xcy.shop.pojo.Brand;
-import com.xcy.shop.service.BrandService;
+import com.shopplus.mapper.BrandMapper;
+import com.shopplus.pojo.Brand;
+import com.shopplus.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

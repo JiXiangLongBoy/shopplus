@@ -1,10 +1,10 @@
 package com.shopplus.service.impl;
 
-import com.xcy.shop.mapper.GoodsMapper;
-import com.xcy.shop.pojo.FenType;
-import com.xcy.shop.pojo.Goods;
-import com.xcy.shop.pojo.GoodsType;
-import com.xcy.shop.service.GoodsService;
+import com.shopplus.mapper.GoodsMapper;
+import com.shopplus.pojo.FenType;
+import com.shopplus.pojo.Goods;
+import com.shopplus.pojo.GoodsType;
+import com.shopplus.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
