@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shopplus.mapper.OrderMapper">
+    <select id="getPriceSum" parameterType="orderIdList">
+        select price from goods where
+        <if test="idList != null and idList.size() != 0">
+            <foreach collection="idList" item="sid" open=" goodsId in (" close=")" separator=",">
+                #{sid}
+            </foreach>
+        </if>
+    </select>
+</mapper>
