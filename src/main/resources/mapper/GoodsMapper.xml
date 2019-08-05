@@ -3,16 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shopplus.mapper.GoodsMapper">
-    <select id="getGoodsByDongType" parameterType="int" resultType="Goods">
+    <select id="getGoodsByDongType" parameterType="int" resultType="com.shopplus.pojo.Goods">
         select * from goods g ,dongfen d where g.dongId = d.dongId and g.dongId = #{dongId}
     </select>
-    <select id="priceDesc" parameterType="int" resultType="Goods">
+    <select id="priceDesc" parameterType="int" resultType="com.shopplus.pojo.Goods">
         select * from goods g ,dongfen d where g.dongId = d.dongId and g.dongId = #{dongId} order by g.price desc
     </select>
-    <select id="salesDesc" parameterType="int" resultType="Goods">
+    <select id="salesDesc" parameterType="int" resultType="com.shopplus.pojo.Goods">
         select * from goods g ,dongfen d where g.dongId = d.dongId and g.dongId = #{dongId} order by g.sales desc
     </select>
-    <select id="getGoodsByBrand" parameterType="int" resultType="Goods">
+    <select id="getGoodsByBrand" parameterType="int" resultType="com.shopplus.pojo.Goods">
         select * from goods g ,dongfen d,brand b where g.dongId = d.dongId and g.brandId=b.brandId
         and g.dongId = #{dongId} and g.brandId=#{brandId}
     </select>
@@ -21,25 +21,25 @@
         select bannerUrl from indexbanner
     </select>
 
-    <select id="getGoodsTypeList" resultType="com.xcy.shop.pojo.GoodsType">
+    <select id="getGoodsTypeList" resultType="com.shopplus.pojo.GoodsType">
         select * from goodstype
     </select>
 
 
-    <select id="getHotsellGoods" resultType="com.xcy.shop.pojo.Goods">
+    <select id="getHotsellGoods" resultType="com.shopplus.pojo.Goods">
            select * from goods where discount=0 order by sales DESC limit 0,5
     </select>
 
-    <select id="getGoodsByTime" resultType="com.xcy.shop.pojo.Goods">
+    <select id="getGoodsByTime" resultType="com.shopplus.pojo.Goods">
            select * from goods where discount=0 order by time desc limit 0,5;
     </select>
 
 
-    <select id="getGoodsByDiscount" resultType="com.xcy.shop.pojo.Goods">
+    <select id="getGoodsByDiscount" resultType="com.shopplus.pojo.Goods">
            select * from goods where discount>0 limit 0,5;
     </select>
 
-    <select id="getGoodsById" parameterType="int" resultType="com.xcy.shop.pojo.Goods">
+    <select id="getGoodsById" parameterType="int" resultType="com.shopplus.pojo.Goods">
            select g.*,b.brandName from goods g left join brand b on g.brandId=b.brandId where goodsId=#{id}
     </select>
 
