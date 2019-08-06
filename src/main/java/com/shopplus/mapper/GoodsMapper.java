@@ -29,4 +29,8 @@ public interface GoodsMapper {
     List<Goods> getGoodsByDiscount();
 
     Goods getGoodsById(int id);
+
+    List<Goods> getGoodsByTypeId(int typeId);
+
+    List<Goods> getGoodsByGoodsName(String goodsName);
 }
