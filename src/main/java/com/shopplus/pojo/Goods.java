@@ -1,6 +1,7 @@
 package com.shopplus.pojo;
 
 import java.util.Date;
+import java.util.List;
 
 public class Goods {
 
@@ -39,6 +40,18 @@ public class Goods {
     private String goodsInfoUrl;
 
     private String brandName;
+
+
+    private List<Integer> idList;
+
+    public List<Integer> getIdList() {
+        return idList;
+    }
+
+    public void setIdList(List<Integer> idList) {
+        this.idList = idList;
+    }
+
 
     public String getBrandName() {
         return brandName;
