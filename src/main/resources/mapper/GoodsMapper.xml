@@ -17,8 +17,8 @@
         and g.dongId = #{dongId} and g.brandId=#{brandId}
     </select>
 
-    <select id="getBannerUrl" resultType="string">
-        select bannerUrl from indexbanner
+    <select id="getBannerUrl" resultType="com.shopplus.pojo.IndexBanner">
+        select bannerUrl,goodsId from indexbanner
     </select>
 
     <select id="getGoodsTypeList" resultType="com.shopplus.pojo.GoodsType">

@@ -3,6 +3,7 @@ package com.shopplus.mapper;
 import com.shopplus.pojo.FenType;
 import com.shopplus.pojo.Goods;
 import com.shopplus.pojo.GoodsType;
+import com.shopplus.pojo.IndexBanner;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -17,7 +18,7 @@ public interface GoodsMapper {
 
     List<Goods> getGoodsByBrand(FenType dongId, Goods brandId);
 
-    List<String> getBannerUrl();
+    List<IndexBanner> getBannerUrl();
 
     List<GoodsType> getGoodsTypeList();
 
