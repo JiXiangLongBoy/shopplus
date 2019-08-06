@@ -5,7 +5,11 @@ import com.shopplus.pojo.OrderFail;
 import java.util.List;
 
 public interface OrderService {
-    int getPriceSum(List<OrderFail> orderFailList);
+    void addOrder(int userId, Integer[] goodsId, Integer[] goodsNum);
 
-    void addOrder(List<OrderFail> orderFailList);
+    int getPriceSum(int userId, Integer[] goodsId, Integer[] goodsNum);
+
+    List<OrderFail> showOrderById(int userId);
+
+    void delOrderByOrderNum(int orderId);
 }
