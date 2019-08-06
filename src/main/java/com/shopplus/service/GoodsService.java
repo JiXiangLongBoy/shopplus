@@ -28,4 +28,8 @@ public interface GoodsService {
     List<Goods> getGoodsByDiscount();
 
     Goods getGoodsById(int id);
+
+    List<Goods> getgoodsByTypeId(int typeId);
+
+    List<Goods> getGoodsByGoodsName(String goodsName);
 }
