@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shopplus.mapper.OrderMapper">
-    <select id="getPriceSum" parameterType="orderIdList">
+    <select id="getPriceSum" parameterType="orderIdList" resultType="list">
         select price from goods where
         <if test="idList != null and idList.size() != 0">
             <foreach collection="idList" item="sid" open=" goodsId in (" close=")" separator=",">
@@ -11,4 +11,16 @@
             </foreach>
         </if>
     </select>
+    <insert id="addOrder" parameterType="Order" >
+        insert into order (orderId,userId,orderNum,sumNum,sumPrice) values (null,#{userId},#{orderNum},#{sumNum},#{sumPrice})
+    </insert>
+    <insert id="addOrderGoods" parameterType="Order">
+        insert into ordergoods (id,orderNum,goodsId,goodsNum,price  ) values (null,#{orderNum},#{goodsId},#{goodsNum},#{price})
+    </insert>
+    <select id="showOrderById" parameterType="int" resultType="Order">
+        select o.orderId,o.userId,o.orderNum,o.sumNum,o.sumPrice,g.goodsId,g.goodsNum,g.price from order o left join ordergoods on o.orderNum=g.orderNum and g.goodsId=#{goodsId}
+    </select>
+    <delete id="delOrderByOrderNum" parameterType="int">
+        delete from order where orderId=#{orderId}
+    </delete>
 </mapper>

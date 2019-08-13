@@ -2,27 +2,31 @@ package com.shopplus.pojo;
 
 import java.util.Date;
 
-public class OrderFail {
+public class Order {
     private Integer orderId;
     private Integer userId;
     private Date orderNum;
     private Integer sumNum;
     private Integer sumPrice;
-    private Integer goodsId;
-    private Integer goodsNum;
-    private Integer price;
+    public Order(){
+
+    }
+    public Order(Integer orderId, Integer userId, Date orderNum, Integer sumNum, Integer sumPrice) {
+        this.orderId = orderId;
+        this.userId = userId;
+        this.orderNum = orderNum;
+        this.sumNum = sumNum;
+        this.sumPrice = sumPrice;
+    }
 
     @Override
     public String toString() {
-        return "OrderFail{" +
+        return "Order{" +
                 "orderId=" + orderId +
                 ", userId=" + userId +
                 ", orderNum=" + orderNum +
                 ", sumNum=" + sumNum +
                 ", sumPrice=" + sumPrice +
-                ", goodsId=" + goodsId +
-                ", goodsNum=" + goodsNum +
-                ", price=" + price +
                 '}';
     }
 
@@ -32,6 +36,14 @@ public class OrderFail {
 
     public void setOrderId(Integer orderId) {
         this.orderId = orderId;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public Date getOrderNum() {
@@ -56,43 +68,5 @@ public class OrderFail {
 
     public void setSumPrice(Integer sumPrice) {
         this.sumPrice = sumPrice;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
-
-    public void setPrice(Integer price) {
-        this.price = price;
-    }
-
-    public OrderFail(Integer goodsId, Integer userId, Integer goodsNum) {
-        this.goodsId = goodsId;
-        this.userId = userId;
-        this.goodsNum = goodsNum;
-    }
-
-    public Integer getGoodsId() {
-        return goodsId;
-    }
-
-    public void setGoodsId(Integer goodsId) {
-        this.goodsId = goodsId;
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public Integer getGoodsNum() {
-        return goodsNum;
-    }
-
-    public void setGoodsNum(Integer goodsNum) {
-        this.goodsNum = goodsNum;
     }
 }
