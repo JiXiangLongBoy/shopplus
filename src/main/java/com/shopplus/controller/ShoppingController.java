@@ -28,7 +28,6 @@ public class ShoppingController {
         @RequestMapping("/showgoods")
         public List<Goods> showShopping(Integer[] ids, Model model){
 
-            System.out.println(ids);
             System.out.println("++++++++++++++++++");
             List<Goods> goodslist = shoppingService.selectAllShoppings(ids);
 
