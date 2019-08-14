@@ -10,8 +10,8 @@ import java.util.List;
 public interface ShoppingService {
     List<Goods> selectAllShoppings(Integer[] goodsId);
 
-    List<Address> selectAddressByUser(User user);
-
 
     int updateAddress(Address address);
+
+    List<Address> selectAddressByUser(int userId);
 }

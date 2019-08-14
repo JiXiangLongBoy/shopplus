@@ -12,7 +12,7 @@ import java.util.List;
 public interface ShoppingMapper {
     List<Goods> selectShoppingById(Goods goods);
 
-    List<Address> selectAddressByUser(User user);
-
     int updateAddressById(Address address);
+
+    List<Address> selectAddressByUser(int userId);
 }

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.xcy.shop.mapper.Shopping">
+<mapper namespace="com.shopplus.mapper.ShoppingMapper">
 
     <select id="selectShoppingById" parameterType="goods" resultType="goods">
         select g.goodsId,g.goodsName,g.price,g.discount,sc.goodsNum
@@ -14,8 +14,8 @@
 
     </select>
 
-    <select id="selectAddressByUser" resultType="address" parameterType="user">
-        select a.* from address a ,user u where a.userId = #{userId} and u.userId=a.userId
+    <select id="selectAddressByUser" resultType="address" parameterType="int">
+        select a.* from address a ,user u where u.userId = #{userId} and u.userId=a.userId
     </select>
 
     <update id="updateAddressById" parameterType="address">

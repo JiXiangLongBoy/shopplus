@@ -39,10 +39,9 @@ public class ShoppingController {
 
         @ApiOperation("获取订单地址")
         @RequestMapping("/showaddress")
-        public List<Address> showaddress(User user){
+        public List<Address> showaddress(int userId){
 
-           String username = user.getUserName();
-           List<Address> addressList = shoppingService.selectAddressByUser(user);
+           List<Address> addressList = shoppingService.selectAddressByUser(userId);
 
            return addressList;
         }
