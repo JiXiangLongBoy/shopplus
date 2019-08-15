@@ -6,18 +6,21 @@ import com.shopplus.pojo.Address;
 import com.shopplus.pojo.Goods;
 import com.shopplus.pojo.User;
 import com.shopplus.service.ShoppingService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/shopping")
+@Api(tags = "购物车")
+@RequestMapping(value = "/shopping",method = {RequestMethod.GET,RequestMethod.POST})
 public class ShoppingController {
 
         @Autowired
