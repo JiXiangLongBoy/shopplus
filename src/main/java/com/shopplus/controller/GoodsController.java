@@ -4,6 +4,7 @@ import com.shopplus.pojo.Goods;
 import com.shopplus.pojo.GoodsType;
 import com.shopplus.pojo.IndexBanner;
 import com.shopplus.service.GoodsService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@Api(tags = "商品")
 @RequestMapping(value = "/goods",method = {RequestMethod.GET,RequestMethod.POST})
 public class GoodsController {
 

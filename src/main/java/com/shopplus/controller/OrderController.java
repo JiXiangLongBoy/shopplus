@@ -4,13 +4,17 @@ package com.shopplus.controller;
 import com.shopplus.pojo.OrderFail;
 import com.shopplus.pojo.User;
 import com.shopplus.service.OrderService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@Api(tags = "订单")
+@RequestMapping(method = {RequestMethod.GET,RequestMethod.POST})
 public class OrderController {
     @Autowired
     private OrderService orderService;

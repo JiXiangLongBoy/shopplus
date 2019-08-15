@@ -27,15 +27,14 @@ public class ShoppingServiceImpl implements ShoppingService {
     }
 
     @Override
-    public List<Address> selectAddressByUser(User user) {
-
-        return shoppingMapper.selectAddressByUser(user);
-    }
-
-    @Override
     public int updateAddress(Address address) {
 
         return shoppingMapper.updateAddressById(address);
+    }
+
+    @Override
+    public List<Address> selectAddressByUser(int userId) {
+        return shoppingMapper.selectAddressByUser(userId);
     }
 
 
