@@ -1,5 +1,6 @@
 package com.shopplus.mapper;
 
+
 import com.shopplus.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -14,4 +15,8 @@ public interface UserMapper {
     int selectUserName(String userName);
 
     int insertUser(User user);
+
+    User findUser(User user);
+
+    void updateUserById(User user);
 }

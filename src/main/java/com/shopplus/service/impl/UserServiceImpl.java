@@ -1,5 +1,6 @@
 package com.shopplus.service.impl;
 
+
 import com.shopplus.mapper.UserMapper;
 import com.shopplus.pojo.LoginResult;
 import com.shopplus.pojo.User;
@@ -15,15 +16,12 @@ public class UserServiceImpl implements UserService {
 
 
 
-    @Override
-    public int login(User user) {
-        return userMapper.login(user);
-    }
 
     @Override
     public LoginResult isLogin(User user) {
+        System.out.println(user);
         int count = userMapper.login(user);
-
+        System.out.println(count);
         if (count == 1) {
             int id = userMapper.isLogin(user);
             return new LoginResult(1,id,"用户名验证登录成功");
@@ -43,6 +41,16 @@ public class UserServiceImpl implements UserService {
     public int insertUser(User user) {
 
         return userMapper.insertUser(user);
+    }
+
+    @Override
+    public User findUser(User user) {
+        return userMapper.findUser(user);
+    }
+
+    @Override
+    public void updateUserById(User user) {
+        userMapper.updateUserById(user);
     }
 
 }

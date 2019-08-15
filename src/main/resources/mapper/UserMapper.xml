@@ -23,6 +23,15 @@
       #{phone}, #{passWord},#{address},#{city},#{estaurantName},#{consignee})
     </insert>
 
+    <select id="findUser" parameterType="user" resultType="com.shopplus.pojo.User">
+       select *  from user where userId = #{userId}
+    </select>
+
+    <update id="updateUserById" parameterType="user" >
+        update user set userName=#{userName},phone=#{phone},password=#{password}
+        ,address=#{address}  where userId=#{userId}
+    </update>
+
 
 
 </mapper>
